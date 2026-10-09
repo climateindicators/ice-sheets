@@ -1,0 +1,37 @@
+indicator:
+  name: Ice Sheets
+  slug: ice-sheets
+  publisher: U.S. Environmental Protection Agency
+  source_page: https://19january2025snapshot.epa.gov/climate-indicators/climate-change-indicators-ice-sheets/index.html
+  technical_documentation: https://19january2025snapshot.epa.gov/system/files/documents/2024-06/ice-sheets_documentation.pdf
+  rights: Public domain, work of the U.S. Government (17 U.S.C. 105)
+datasets:
+- file: ice_sheet_mass_balance.csv
+  figure: Figure 1
+  figure_title: Figure 1. Cumulative Mass Balance of Greenland and Antarctica, 1992–2023
+  source_file: ice_sheets_fig-1.csv
+  source_sha256: ba6ff9bbf959fd48f6f8039af798c101c86dbc7acd4b547cca4ee9ca2914763b
+  source_encoding: UTF-8-BOM
+  data_source: IMBIE, 2021; NASA, 2023
+  web_update: June 2024
+  unit: Billion metric tons
+  rows: 1836
+  columns:
+  - name: decimal_year
+    type: number
+    description: Time of the estimate as a decimal year (e.g. 1992.0833 is about the
+      start of February 1992).
+  - name: source
+    type: string
+    description: 'Who produced the estimate: IMBIE (combined estimate from many studies)
+      or NASA (NASA JPL analysis of GRACE data).'
+  - name: region
+    type: string
+    description: 'Ice sheet: Antarctica or Greenland.'
+  - name: measure
+    type: string
+    description: 'mass: cumulative mass balance, centered at zero in 2002; uncertainty:
+      IMBIE''s uncertainty around that estimate.'
+  - name: value
+    type: number
+    description: Billion metric tons.
